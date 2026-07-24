@@ -103,7 +103,7 @@ h1, h2, h3, h4, .font-playfair {
   }
 
   .phone-hero .hero-photo {
-    width: min(86vw, 32svh);
+    width: 100%;
     max-width: 100%;
   }
 
@@ -116,9 +116,26 @@ h1, h2, h3, h4, .font-playfair {
     margin-top: 0.5rem;
   }
 
+  .site-monogram {
+    font-size: 1.125rem;
+  }
+
+  .phone-hero .hero-content > p:first-child {
+    font-size: 0.5rem;
+    letter-spacing: 0.14em;
+  }
+
   .phone-hero h1 {
-    font-size: clamp(2.25rem, 8vw, 3rem);
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
     line-height: 0.85;
+  }
+
+  .phone-hero h1 span {
+    display: inline;
+  }
+
+  .phone-hero h1 span:nth-child(2) {
+    margin-inline: 0.2em;
   }
 
   .phone-hero .hero-content > p:last-child {
