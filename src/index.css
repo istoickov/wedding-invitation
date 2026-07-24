@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Libre Caslon Text', serif;
+  background: #fff8f5;
+  color: #1e1b18;
+}
+
+h1, h2, h3, h4, .font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.divider-diamond::after {
+  content: '◆';
+  display: block;
+  font-size: 10px;
+  color: #8e706b;
+  margin-top: -6px;
+  background: inherit;
+  width: 20px;
+  text-align: center;
+}
+
+.reveal-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.reveal-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.envelope-flap,
+.envelope-letter,
+.envelope-seal {
+  transition: transform 1300ms cubic-bezier(0.22, 1, 0.36, 1), opacity 350ms ease;
+}
+
+.envelope-flap {
+  transform-origin: top center;
+  transform-style: preserve-3d;
+}
+
+.envelope-opening .envelope-flap {
+  transform: rotateX(180deg);
+}
+
+.envelope-opening .envelope-letter {
+  transform: translateY(-35%);
+}
+
+.envelope-opening .envelope-seal {
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0;
+}
+
+@layer components {
+  .page-container { @apply mx-auto w-full max-w-5xl px-6 lg:px-8; }
+  .content-section { @apply py-20 md:py-28; }
+  .section-heading { @apply mb-12 flex flex-col items-center text-center md:mb-16; }
+  .label { @apply font-label text-[10px] uppercase tracking-[0.2em] sm:text-xs; }
+  .event-item { @apply flex flex-col items-center gap-2; }
+  .detail-row { @apply flex items-center gap-4; }
+  .icon-badge { @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm text-primary; }
+}
