@@ -93,8 +93,10 @@ h1, h2, h3, h4, .font-playfair {
   }
 
   .phone-hero {
+    height: 100svh;
+    min-height: 100svh;
     justify-content: center;
-    padding-top: 3.75rem;
+    padding-top: 2.5rem;
     padding-bottom: 0.5rem;
   }
 
@@ -117,7 +119,7 @@ h1, h2, h3, h4, .font-playfair {
   }
 
   .site-monogram {
-    font-size: 1.125rem;
+    display: none;
   }
 
   .phone-hero .hero-content > p:first-child {
