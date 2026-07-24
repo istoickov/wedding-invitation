@@ -50,7 +50,7 @@ export const EnvelopeScreen = ({ onStartOpen, onOpen }) => {
         </div>
 
         <div className="envelope-seal absolute left-1/2 top-[57%] z-50 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#ffb4a8]/40 bg-primary text-white shadow-lg ring-4 ring-primary/10 sm:h-16 sm:w-16">
-          <span className="font-headline text-2xl">Б</span>
+          <span className="font-headline text-sm tracking-tight sm:text-base">Б&amp;И</span>
         </div>
       </button>
 

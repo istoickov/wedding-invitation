@@ -9,6 +9,7 @@ body {
   font-family: 'Libre Caslon Text', serif;
   background: #fff8f5;
   color: #1e1b18;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, .font-playfair {
@@ -84,4 +85,79 @@ h1, h2, h3, h4, .font-playfair {
   .event-item { @apply flex flex-col items-center gap-2; }
   .detail-row { @apply flex items-center gap-4; }
   .icon-badge { @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm text-primary; }
+}
+
+@media (max-width: 767px) {
+  .phone-screen {
+    min-height: 100svh;
+  }
+
+  .phone-hero {
+    justify-content: center;
+    padding-top: 4.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .phone-hero .hero-photo {
+    width: min(64vw, 25svh);
+  }
+
+  .phone-hero .hero-content {
+    gap: 0.75rem;
+  }
+
+  .phone-hero h1 {
+    font-size: clamp(2.25rem, 8vw, 3rem);
+  }
+
+  .phone-gallery {
+    justify-content: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .phone-gallery .section-heading {
+    margin-bottom: 1.75rem;
+  }
+
+  .phone-location {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .phone-location-grid {
+    gap: 1rem;
+  }
+
+  .phone-event-card,
+  .phone-message-card {
+    padding: 1rem;
+  }
+
+  .phone-event-content {
+    gap: 1rem;
+  }
+
+  .phone-event-card h2 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .phone-event-card .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1rem;
+  }
+
+  .phone-event-card a {
+    padding: 1rem;
+  }
+
+  .phone-rsvp {
+    display: flex;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
