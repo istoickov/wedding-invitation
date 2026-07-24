@@ -88,15 +88,13 @@ const FloatingNavigation = () => {
         </button>
       )}
       {activeIndex < navigationSections.length - 1 && (
-        <button
-          type="button"
-          aria-label={`Продолжи до ${navigationSections[activeIndex + 1].label}`}
-          onClick={() => document.getElementById(navigationSections[activeIndex + 1].id)?.scrollIntoView({ behavior: 'smooth' })}
+        <div
+          aria-hidden="true"
           className="fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center text-primary/70 transition-colors active:text-primary md:hidden"
         >
           <span className="material-symbols-outlined -mb-4 text-xl animate-bounce">keyboard_arrow_down</span>
           <span className="material-symbols-outlined text-xl animate-bounce">keyboard_arrow_down</span>
-        </button>
+        </div>
       )}
       {activeIndex > 0 && (
         <nav aria-label="Навигација низ поканата" className="fixed right-4 top-1/2 z-50 hidden -translate-y-1/2 md:block md:right-6">
@@ -131,7 +129,7 @@ export const DetailsScreen = () => {
         <section className="phone-screen phone-hero page-container flex min-h-screen flex-col justify-center py-20 pt-28 sm:py-24 sm:pt-32 md:py-32">
           <div className="grid items-center gap-10 sm:gap-12 md:grid-cols-12 md:gap-8">
             <div className="hero-content order-2 flex flex-col gap-5 text-center md:order-1 md:col-span-5 md:text-left">
-              <p className="label text-primary">Добредојде на нашиот ден</p>
+              <p className="label text-primary">Добредојдовте на нашиот ден</p>
               <h1 className="font-headline text-5xl leading-[0.95] text-primary sm:text-6xl md:text-7xl">
                 <span className="block">Благица</span>
                 <span className="block">&amp;</span>
@@ -144,7 +142,7 @@ export const DetailsScreen = () => {
             </div>
 
             <div className="hero-photo order-1 relative mx-auto w-full max-w-[18rem] md:order-2 md:col-start-7 md:col-span-6 md:max-w-none">
-              <div className="absolute -inset-3 border border-outline-variant md:-inset-4" />
+              <div className="hero-frame absolute -inset-3 border border-outline-variant md:-inset-4" />
               <div className="relative aspect-[3/4] overflow-hidden bg-surface-container">
                 <img
                   src="/images/IMG_9250-1600.jpg"
@@ -159,7 +157,7 @@ export const DetailsScreen = () => {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 md:mt-16 md:pt-10">
+          <div className="hero-families mt-12 pt-8 md:mt-16 md:pt-10">
             <div className="mt-6 flex items-center justify-between gap-6">
               <p className="label font-bold text-primary">Стоичкови</p>
               <p className="label font-bold text-primary">Томоски</p>
