@@ -210,7 +210,7 @@ export const DetailsScreen = () => {
                         <div className="event-item">
                           <span className="material-symbols-outlined text-3xl text-primary">schedule</span>
                           <h3 className="label text-primary">Церемонија</h3>
-                          <p className="font-headline text-xl">19:00</p>
+                          <p className="font-headline text-xl">19:00 – 19:30</p>
                         </div>
                         <div className="mx-auto h-px w-12 bg-outline-variant" />
                         <div className="event-item">
