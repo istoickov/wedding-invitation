@@ -129,7 +129,6 @@ export const DetailsScreen = () => {
         <section className="phone-screen phone-hero page-container flex min-h-screen flex-col justify-center py-20 pt-28 sm:py-24 sm:pt-32 md:py-32">
           <div className="grid items-center gap-10 sm:gap-12 md:grid-cols-12 md:gap-8">
             <div className="hero-content order-2 flex flex-col gap-5 text-center md:order-1 md:col-span-5 md:text-left">
-              <p className="label text-primary">Добредојдовте на нашиот ден</p>
               <h1 className="font-headline text-5xl leading-[0.95] text-primary sm:text-6xl md:text-7xl">
                 <span className="block">Благица</span>
                 <span className="block">&amp;</span>
